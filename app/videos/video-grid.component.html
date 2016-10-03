@@ -1,0 +1,21 @@
+<tpl-video-detail 
+    [video] = "selectedVideo"
+    [pvideo] = "prevVideo"
+    [nvideo] = "nextVideo"
+    (changeVideo) = "onChangeVideo($event)">
+</tpl-video-detail>
+
+<div class="container">
+    <div class="video-grid">
+        <div class="row">
+            <div *ngFor="let video of videos; let i = index"
+                class="col-md-3 col-sm-4 col-xs-6"
+                (click)="onSelect(video, i)">
+                <div class="item">
+                    <img width="100%" src = "http://img.youtube.com/vi/{{video.url}}/hqdefault.jpg" />
+                    <span>{{video.name}}</span>
+                </div>
+            </div>
+        </div>        
+    </div>        
+</div>

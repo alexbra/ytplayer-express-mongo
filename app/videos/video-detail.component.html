@@ -1,0 +1,21 @@
+<div class="container">    
+    <div *ngIf="video">
+        <div id="light" class="lighbox_content"
+            [style.left] = "iframeParams.left"
+            [style.top] = "iframeParams.top">
+            <tpl-player [video] = "video"></tpl-player>
+        </div>
+        <div id="fade" class="loghbox_black_overlay">
+        </div>
+        <div id="menu" class="lighbox_menu">
+            <span class="title">{{ video.name }}</span>
+            <span class="glyphicon glyphicon-remove close_button" (click)="onCloseVideo()"></span>
+            <span class="glyphicon glyphicon-chevron-right next_button" 
+                [ngClass]="{disabled: !nvideo}"
+                (click)="nvideo && onNextVideo()"></span>            
+            <span class="glyphicon glyphicon-chevron-left prev_button" 
+                [ngClass]="{disabled: !pvideo}"
+                (click)="pvideo && onPrevVideo()"></span> 
+        </div>
+    </div>
+</div>

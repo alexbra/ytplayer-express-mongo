@@ -1,0 +1,13 @@
+<ul>
+    <li *ngFor="let video of videos; let i = index"
+        (click)="onSelect(video)" 
+        class="widget-list-item" [class.active]="isThisSelectedVideo(video)" >
+        <div class="list-item-thumb">
+            <img width="100%" src = "http://img.youtube.com/vi/{{video.url}}/default.jpg" />
+        </div>
+        <div class="list-item-desc">
+            <span>{{video.name}}</span>            
+        </div>
+        <div style="clear: both;"></div>
+    </li>                               
+</ul>
