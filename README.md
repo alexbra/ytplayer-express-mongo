@@ -8,7 +8,7 @@ All differences with previous project only in two places. I add bin/www and app.
 To use this code you need to install MongoDB and create any database. 
 
 ```bash
-git clone  https://github.com/alexbra/ytplayer-manage  my-proj
+git clone  https://github.com/alexbra/ytplayer-express-mongo  my-proj
 cd my-proj
 npm i 
 ```
